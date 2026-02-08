@@ -140,8 +140,9 @@ where DATE(tpep_dropoff_datetime) BETWEEN '2024-03-01' AND '2024-03-15'
 
 **Answer:** GCP Bucket
 
-**Explanation:**
+**Reasoning:**
 External tables don't store data in BigQuery. They reference data in GCS buckets- therefore the data is stored in a GCP Bucket for the external table I created.
+
 ---
 
 ## Question 8: Clustering Best Practices
