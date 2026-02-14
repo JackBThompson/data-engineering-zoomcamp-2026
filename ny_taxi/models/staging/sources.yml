@@ -4,7 +4,7 @@ sources:
   - name: nytaxi
     database: project-481a6090-10e3-4ce0-9bf
     schema: m4_nytaxi
-    
+
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
