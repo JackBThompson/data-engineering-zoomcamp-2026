@@ -1,0 +1,20 @@
+ny_taxi_dbt:  # This should match the 'profile' name in your dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: project-481a6090-10e3-4ce0-9bf  # ← CHANGE THIS
+      dataset: m4_nytaxi  # Development dataset
+      threads: 4
+      keyfile: /workspaces/docker-workshop/04_analytics_engineering/ny_taxi_dbt/acc_key.json  # ← CHANGE THIS
+      location: us-east4
+      
+    prod:
+      type: bigquery
+      method: service-account
+      project: project-481a6090-10e3-4ce0-9bf  # ← CHANGE THIS
+      dataset: production  # Production dataset
+      threads: 4
+      keyfile: /workspaces/docker-workshop/04_analytics_engineering/ny_taxi_dbt/acc_key.json  # ← CHANGE THIS
+      location: us-east4

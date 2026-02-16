@@ -1,16 +1,16 @@
 with tripdata as (
     select * 
-    from {{ source('nytaxi', 'green_tripdata') }}
+    from `project-481a6090-10e3-4ce0-9bf.m4_nytaxi.green_tripdata`
     where vendorid is not null 
 ),
 
 renamed as (
   select
       -- identifiers
-      cast(vendorid as integer) as vendorid,
-      cast(ratecodeid as integer) as ratecodeid,
-      cast(pulocationid as integer) as pickup_locationid,
-      cast(dolocationid as integer) as dropoff_locationid,
+      cast(vendorid as integer) as vendor_id,
+      cast(ratecodeid as integer) as ratecode_id,
+      cast(pulocationid as integer) as pickup_location_id,
+      cast(dolocationid as integer) as dropoff_location_id,
       
       -- timestamps
       cast(lpep_pickup_datetime as timestamp) as pickup_datetime,
