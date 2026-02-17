@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.parquet
 
 # Byte-compiled / optimized / DLL files
@@ -207,3 +208,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+=======
+# Sensitive credentials
+acc_key.json
+**/*key*.json
+*.json
+**/credentials/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+>>>>>>> module-4-final
