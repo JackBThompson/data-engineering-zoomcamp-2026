@@ -1,0 +1,31 @@
+name: 'ny_taxi_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ny_taxi_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  ny_taxi_dbt:
+    # Staging models - views that read from raw data
+    staging:
+      +materialized: view
+    
+    # Intermediate models - views for transformation logic
+    intermediate:
+      +materialized: view
+    
+    # Marts models - final tables for analytics
+    marts:
+      +materialized: view
