@@ -60,8 +60,7 @@ Array variables must be passed as valid JSON with proper shell quoting — outer
 **Answer:** bruin run ingestion/trips.py --downstream
 
 **Explanation:**
-The `+` suffix in Bruin's selector syntax means "this asset plus all downstream assets." Assets are referenced by dot notation (e.g., `ingestion.trips`), not file path.
-
+The --downstream flag tells Bruin to run the specified asset plus all downstream assets that depend on it. Assets are referenced by file path, and the flag is confirmed in the bruin run --help output.
 ---
 
 ## Question 5: Quality Checks
