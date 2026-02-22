@@ -37,7 +37,7 @@ What is the estimated amount of data that will be read when this query is execut
 select count(DISTINCT PULocationID)
 from `project-481a6090-10e3-4ce0-9bf.taxi_data.external_yellow_taxi`
 ```
-**Estimated Bytes (External Table):** O MB
+**Estimated Bytes (External Table):** 0 MB
 
 **Query for Regular Table:**
 ```
