@@ -90,7 +90,7 @@ conn.execute("""
 
 **Note:** `payment_type` is stored as text (e.g. `'Credit'`), not an integer.
 
-**Answer:** `TBD`
+**Answer:** `26.66%`
 
 ---
 
@@ -106,6 +106,6 @@ conn.execute('''
 ''').fetchall()
 ```
 
-**Answer:** `TBD`
+**Answer:** `$6,063.41`
 
 ---
